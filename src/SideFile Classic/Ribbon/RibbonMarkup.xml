@@ -1,0 +1,1312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://schemas.microsoft.com/windows/2009/Ribbon">
+  <Application.Commands>
+    <Command Name="ApplicationMenu" Id="3" />
+    <Command Name="RecentItemsCaption" Id="4">
+      <Command.LabelTitle>
+        <String Id="418">Recently visited directories</String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="HelpButton" Id="5">
+      <Command.TooltipTitle>
+        <String Id="419">SideFile GitHub (F1)</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="420">View the SideFile GitHub page for help and source code.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="421">H</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="QAT" Id="6" />
+    <Command Name="btnCustomizeQat" Id="7" />
+    <Command Name="btnNewWindow" Id="2">
+      <Command.LabelTitle>
+        <String Id="422">&amp;New window</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="423">New window</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="424">Open a new window.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="425">N</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="426">Res/icons8-new-window-16.bmp</Image>
+        <Image Id="427" MinDPI="120">Res/icons8-new-window-20.bmp</Image>
+        <Image Id="428" MinDPI="144">Res/icons8-new-window-24.bmp</Image>
+        <Image Id="429" MinDPI="192">Res/icons8-new-window-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="430">Res/icons8-new-window-32.bmp</Image>
+        <Image Id="431" MinDPI="120">Res/icons8-new-window-40.bmp</Image>
+        <Image Id="432" MinDPI="144">Res/icons8-new-window-48.bmp</Image>
+        <Image Id="433" MinDPI="192">Res/icons8-new-window-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnSettings" Id="8">
+      <Command.LabelTitle>
+        <String Id="434">&amp;Settings</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="435">Settings (Ctrl+,)</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="436">Configure application settings.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="437">S</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="438">Res/icons8-settings-16.bmp</Image>
+        <Image Id="439" MinDPI="120">Res/icons8-settings-20.bmp</Image>
+        <Image Id="440" MinDPI="144">Res/icons8-settings-24.bmp</Image>
+        <Image Id="441" MinDPI="192">Res/icons8-settings-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="442">Res/icons8-settings-32.bmp</Image>
+        <Image Id="443" MinDPI="120">Res/icons8-settings-40.bmp</Image>
+        <Image Id="444" MinDPI="144">Res/icons8-settings-48.bmp</Image>
+        <Image Id="445" MinDPI="192">Res/icons8-settings-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnAbout" Id="9">
+      <Command.LabelTitle>
+        <String Id="446">&amp;About SideFile</String>
+      </Command.LabelTitle>
+      <Command.LabelDescription>
+        <String Id="447">View details and version information about SideFile.</String>
+      </Command.LabelDescription>
+      <Command.TooltipTitle>
+        <String Id="448">About SideFile</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="449">View details and version information about SideFile.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="450">A</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="451">Res/icons8-info-16.bmp</Image>
+        <Image Id="452" MinDPI="120">Res/icons8-info-20.bmp</Image>
+        <Image Id="453" MinDPI="144">Res/icons8-info-24.bmp</Image>
+        <Image Id="454" MinDPI="192">Res/icons8-info-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="455">Res/icons8-info-32.bmp</Image>
+        <Image Id="456" MinDPI="120">Res/icons8-info-40.bmp</Image>
+        <Image Id="457" MinDPI="144">Res/icons8-info-48.bmp</Image>
+        <Image Id="458" MinDPI="192">Res/icons8-info-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="mngAbout" Id="10">
+      <Command.LabelTitle>
+        <String Id="459">View about information</String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="btnAboutWin" Id="11">
+      <Command.LabelTitle>
+        <String Id="460">About &amp;Windows</String>
+      </Command.LabelTitle>
+      <Command.LabelDescription>
+        <String Id="461">View details about your current Windows operating system.</String>
+      </Command.LabelDescription>
+      <Command.TooltipTitle>
+        <String Id="462">About Windows</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="463">View details about your current Windows operating system.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="464">W</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="465">Res/icons8-windows-10-16.bmp</Image>
+        <Image Id="466" MinDPI="120">Res/icons8-windows-10-20.bmp</Image>
+        <Image Id="467" MinDPI="144">Res/icons8-windows-10-24.bmp</Image>
+        <Image Id="468" MinDPI="192">Res/icons8-windows-10-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="469" MinDPI="144">Res/icons8-windows-10-48.bmp</Image>
+        <Image Id="470" MinDPI="192">Res/icons8-windows-10-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="sbAbout" Id="12" TooltipDescription="About">
+      <Command.LabelTitle>
+        <String Id="471">A&amp;bout SideFile</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="472">B</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="btnExit" Id="13">
+      <Command.LabelTitle>
+        <String Id="473">E&amp;xit</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="474">Exit (Alt+F4)</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="475">Exit SideFile.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="476">X</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="477">Res/icons8-exit-16.bmp</Image>
+        <Image Id="478" MinDPI="120">Res/icons8-exit-20.bmp</Image>
+        <Image Id="479" MinDPI="144">Res/icons8-exit-24.bmp</Image>
+        <Image Id="480" MinDPI="192">Res/icons8-exit-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="481">Res/icons8-exit-32.bmp</Image>
+        <Image Id="482" MinDPI="120">Res/icons8-exit-40.bmp</Image>
+        <Image Id="483" MinDPI="144">Res/icons8-exit-48.bmp</Image>
+        <Image Id="484" MinDPI="192">Res/icons8-exit-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="sbgCliHere" Id="14">
+      <Command.LabelTitle>
+        <String Id="485">Open &amp;Command Processor here</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="486">Open Command Processor here</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="487">Open a command processor to the current location.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="488">C</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="489">Res/icons8-console-16.bmp</Image>
+        <Image Id="490" MinDPI="120">Res/icons8-console-20.bmp</Image>
+        <Image Id="491" MinDPI="144">Res/icons8-console-24.bmp</Image>
+        <Image Id="492" MinDPI="192">Res/icons8-console-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="493">Res/icons8-console-32.bmp</Image>
+        <Image Id="494" MinDPI="120">Res/icons8-console-40.bmp</Image>
+        <Image Id="495" MinDPI="144">Res/icons8-console-48.bmp</Image>
+        <Image Id="496" MinDPI="192">Res/icons8-console-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="mngCliHere" Id="15">
+      <Command.LabelTitle>
+        <String Id="497">Start a command processor here</String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="btnBrowseCli" Id="16">
+      <Command.LabelTitle>
+        <String Id="498">Browse...</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="499">Browse</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="500">Browse for a command processor.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="501">B</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="502">Res/icons8-browse-folder-16.bmp</Image>
+        <Image Id="503" MinDPI="120">Res/icons8-browse-folder-20.bmp</Image>
+        <Image Id="504" MinDPI="144">Res/icons8-browse-folder-24.bmp</Image>
+        <Image Id="505" MinDPI="192">Res/icons8-browse-folder-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="506">Res/icons8-browse-folder-32.bmp</Image>
+        <Image Id="507" MinDPI="120">Res/icons8-browse-folder-40.bmp</Image>
+        <Image Id="508" MinDPI="144">Res/icons8-browse-folder-48.bmp</Image>
+        <Image Id="509" MinDPI="192">Res/icons8-browse-folder-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnCliCmd" Id="17">
+      <Command.LabelTitle>
+        <String Id="510">Command Prompt</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="511">C</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="512">Res/icons8-command-prompt-16.bmp</Image>
+        <Image Id="513" MinDPI="120">Res/icons8-command-prompt-20.bmp</Image>
+        <Image Id="514" MinDPI="144">Res/icons8-command-prompt-24.bmp</Image>
+        <Image Id="515" MinDPI="192">Res/icons8-command-prompt-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="516">Res/icons8-command-prompt-32.bmp</Image>
+        <Image Id="517" MinDPI="120">Res/icons8-command-prompt-40.bmp</Image>
+        <Image Id="518" MinDPI="144">Res/icons8-command-prompt-48.bmp</Image>
+        <Image Id="519" MinDPI="192">Res/icons8-command-prompt-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnCliWinPwsh" Id="18">
+      <Command.LabelTitle>
+        <String Id="520">Windows PowerShell</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="521">P</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="522">Res/icons8-powershell-16.bmp</Image>
+        <Image Id="523" MinDPI="120">Res/icons8-powershell-20.bmp</Image>
+        <Image Id="524" MinDPI="144">Res/icons8-powershell-24.bmp</Image>
+        <Image Id="525" MinDPI="192">Res/icons8-powershell-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="526">Res/icons8-powershell-32.bmp</Image>
+        <Image Id="527" MinDPI="120">Res/icons8-powershell-40.bmp</Image>
+        <Image Id="528" MinDPI="144">Res/icons8-powershell-48.bmp</Image>
+        <Image Id="529" MinDPI="192">Res/icons8-powershell-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnCliPwsh" Id="19">
+      <Command.LabelTitle>
+        <String Id="530">PowerShell</String>
+      </Command.LabelTitle>
+      <Command.SmallImages>
+        <Image Id="531">Res/icons8-powershelldark-16.bmp</Image>
+        <Image Id="532" MinDPI="120">Res/icons8-powershelldark-20.bmp</Image>
+        <Image Id="533" MinDPI="144">Res/icons8-powershelldark-24.bmp</Image>
+        <Image Id="534" MinDPI="192">Res/icons8-powershelldark-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="535">Res/icons8-powershelldark-32.bmp</Image>
+        <Image Id="536" MinDPI="120">Res/icons8-powershelldark-40.bmp</Image>
+        <Image Id="537" MinDPI="144">Res/icons8-powershelldark-48.bmp</Image>
+        <Image Id="538" MinDPI="192">Res/icons8-powershelldark-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="tabHome" Id="20">
+      <Command.LabelTitle>
+        <String Id="539">Home</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="540">TH</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="tabBrowse" Id="21">
+      <Command.LabelTitle>
+        <String Id="541">Browse</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="542">TB</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="tabSecurity" Id="22">
+      <Command.LabelTitle>
+        <String Id="543">Security</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="544">TS</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="tabView" Id="23">
+      <Command.LabelTitle>
+        <String Id="545">View</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="546">TV</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="tabTools" Id="24">
+      <Command.LabelTitle>
+        <String Id="547">Tools</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="548">TT</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="ctabPicTools" Id="25">
+      <Command.LabelTitle>
+        <String Id="549">  Picture tools  </String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="tabPicture" Id="26">
+      <Command.LabelTitle>
+        <String Id="550">Picture</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="551">TP</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="ctabImgTools" Id="27">
+      <Command.LabelTitle>
+        <String Id="552"> Image tools </String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="tabDskImg" Id="28">
+      <Command.LabelTitle>
+        <String Id="553">Disk image</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="554">TM</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="ctabArchiveTools" Id="29">
+      <Command.LabelTitle>
+        <String Id="555">Archive tools</String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="tabArchive" Id="30">
+      <Command.LabelTitle>
+        <String Id="556">Compressed archive</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="557">TA</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="ctabExeTools" Id="31">
+      <Command.LabelTitle>
+        <String Id="558">PE/COFF tools</String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="tabExe" Id="33">
+      <Command.LabelTitle>
+        <String Id="559">Binary</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="560">TX</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="ctabScriptTools" Id="34">
+      <Command.LabelTitle>
+        <String Id="561">  Script tools  </String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="tabScript" Id="35">
+      <Command.LabelTitle>
+        <String Id="562">Script</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="563">TR</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="ctabDriveTools" Id="36">
+      <Command.LabelTitle>
+        <String Id="564">  Drive tools  </String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="tabDrive" Id="37">
+      <Command.LabelTitle>
+        <String Id="565">Drive</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="566">TD</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="ctabComputer" Id="38">
+      <Command.LabelTitle>
+        <String Id="567">    Computer    </String>
+      </Command.LabelTitle>
+    </Command>
+    <Command Name="tabThisPC" Id="39">
+      <Command.LabelTitle>
+        <String Id="568">This PC</String>
+      </Command.LabelTitle>
+      <Command.Keytip>
+        <String Id="569">TC</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="grpClipboard" Id="40">
+      <Command.LabelTitle>
+        <String Id="570">Clipboard</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="571">Clipboard</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="572">Clipboard group (Home tab)</String>
+      </Command.TooltipDescription>
+      <Command.SmallImages>
+        <Image Id="573">Res/icons8-clipboard-16.bmp</Image>
+        <Image Id="574" MinDPI="120">Res/icons8-clipboard-20.bmp</Image>
+        <Image Id="575" MinDPI="144">Res/icons8-clipboard-24.bmp</Image>
+        <Image Id="576" MinDPI="192">Res/icons8-clipboard-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="577">Res/icons8-clipboard-32.bmp</Image>
+        <Image Id="578" MinDPI="120">Res/icons8-clipboard-40.bmp</Image>
+        <Image Id="579" MinDPI="144">Res/icons8-clipboard-48.bmp</Image>
+        <Image Id="580" MinDPI="192">Res/icons8-clipboard-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnCopy" Id="41">
+      <Command.LabelTitle>
+        <String Id="581">&amp;Copy</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="582">Copy (Ctrl + C)</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="583">Copy the selected file(s) to the clipboard.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="584">CF</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="585">Res/icons8-copy-16.bmp</Image>
+        <Image Id="586" MinDPI="120">Res/icons8-copy-20.bmp</Image>
+        <Image Id="587" MinDPI="144">Res/icons8-copy-24.bmp</Image>
+        <Image Id="588" MinDPI="192">Res/icons8-copy-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="589">Res/icons8-copy-32.bmp</Image>
+        <Image Id="590" MinDPI="120">Res/icons8-copy-40.bmp</Image>
+        <Image Id="591" MinDPI="144">Res/icons8-copy-48.bmp</Image>
+        <Image Id="592" MinDPI="192">Res/icons8-copy-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="sbCopy" Id="42" TooltipDescription="Copy">
+      <Command.Keytip>
+        <String Id="593">CP</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="btnCopyPath" Id="43">
+      <Command.LabelTitle>
+        <String Id="594">Copy as &amp;path</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="595">Copy as path (Ctrl + Shift + C)</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="596">Copy the selected file path.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="597">CP</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="598">Res/icons8-file-path-16.bmp</Image>
+        <Image Id="599" MinDPI="120">Res/icons8-file-path-20.bmp</Image>
+        <Image Id="600" MinDPI="144">Res/icons8-file-path-24.bmp</Image>
+        <Image Id="601" MinDPI="192">Res/icons8-file-path-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="602">Res/icons8-file-path-32.bmp</Image>
+        <Image Id="603" MinDPI="120">Res/icons8-file-path-40.bmp</Image>
+        <Image Id="604" MinDPI="144">Res/icons8-file-path-48.bmp</Image>
+        <Image Id="605" MinDPI="192">Res/icons8-file-path-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="sbgCopyTo" Id="44">
+      <Command.LabelTitle>
+        <String Id="606">Cop&amp;y to </String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="607">Copy to</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="608">Copy the selected files to a specific location.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="609">CT</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="610">Res/icons8-copy-to-folder-16.bmp</Image>
+        <Image Id="611" MinDPI="120">Res/icons8-copy-to-folder-20.bmp</Image>
+        <Image Id="612" MinDPI="144">Res/icons8-copy-to-folder-24.bmp</Image>
+        <Image Id="613" MinDPI="192">Res/icons8-copy-to-folder-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="614">Res/icons8-copy-to-folder-32.bmp</Image>
+        <Image Id="615" MinDPI="120">Res/icons8-copy-to-folder-40.bmp</Image>
+        <Image Id="616" MinDPI="144">Res/icons8-copy-to-folder-48.bmp</Image>
+        <Image Id="617" MinDPI="192">Res/icons8-copy-to-folder-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnBrowseCopyTo" Id="45">
+      <Command.LabelTitle>
+        <String Id="618">&amp;Browse...</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="619">Browse</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="620">Browse for the copy destination.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="621">B</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="622">Res/icons8-browse-folder-16.bmp</Image>
+        <Image Id="623" MinDPI="120">Res/icons8-browse-folder-20.bmp</Image>
+        <Image Id="624" MinDPI="144">Res/icons8-browse-folder-24.bmp</Image>
+        <Image Id="625" MinDPI="192">Res/icons8-browse-folder-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="626">Res/icons8-browse-folder-32.bmp</Image>
+        <Image Id="627" MinDPI="120">Res/icons8-browse-folder-40.bmp</Image>
+        <Image Id="628" MinDPI="144">Res/icons8-browse-folder-48.bmp</Image>
+        <Image Id="629" MinDPI="192">Res/icons8-browse-folder-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnPaste" Id="46">
+      <Command.LabelTitle>
+        <String Id="630">&amp;Paste</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="631">Paste (Ctrl + V)</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="632">Paste the files in the clipboard.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="633">V</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="634">Res/icons8-clipboard-16.bmp</Image>
+        <Image Id="635" MinDPI="120">Res/icons8-clipboard-20.bmp</Image>
+        <Image Id="636" MinDPI="144">Res/icons8-clipboard-24.bmp</Image>
+        <Image Id="637" MinDPI="192">Res/icons8-clipboard-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="638">Res/icons8-clipboard-32.bmp</Image>
+        <Image Id="639" MinDPI="120">Res/icons8-clipboard-40.bmp</Image>
+        <Image Id="640" MinDPI="144">Res/icons8-clipboard-48.bmp</Image>
+        <Image Id="641" MinDPI="192">Res/icons8-clipboard-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="sbPaste" Id="47" TooltipDescription="Paste">
+      <Command.Keytip>
+        <String Id="642">V</String>
+      </Command.Keytip>
+    </Command>
+    <Command Name="btnPasteLink" Id="48">
+      <Command.LabelTitle>
+        <String Id="643">Paste as &amp;shortcut</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="644">Paste as shortcut (Ctrl + Shift +V)</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="645">Paste the files in the clipboard as shortcuts.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="646">S</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="647">Res/icons8-paste-shortcut-16.bmp</Image>
+        <Image Id="648" MinDPI="120">Res/icons8-paste-shortcut-20.bmp</Image>
+        <Image Id="649" MinDPI="144">Res/icons8-paste-shortcut-24.bmp</Image>
+        <Image Id="650" MinDPI="192">Res/icons8-paste-shortcut-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="651">Res/icons8-paste-shortcut-32.bmp</Image>
+        <Image Id="652" MinDPI="120">Res/icons8-paste-shortcut-40.bmp</Image>
+        <Image Id="653" MinDPI="144">Res/icons8-paste-shortcut-48.bmp</Image>
+        <Image Id="654" MinDPI="192">Res/icons8-paste-shortcut-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnCut" Id="49">
+      <Command.LabelTitle>
+        <String Id="655">Cu&amp;t</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="656">Cut (Ctrl + X)</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="657">Cut the selected files and put them in the clipboard.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="658">X</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="659">Res/icons8-cut-16.bmp</Image>
+        <Image Id="660" MinDPI="120">Res/icons8-cut-20.bmp</Image>
+        <Image Id="661" MinDPI="144">Res/icons8-cut-24.bmp</Image>
+        <Image Id="662" MinDPI="192">Res/icons8-cut-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="663">Res/icons8-cut-32.bmp</Image>
+        <Image Id="664" MinDPI="120">Res/icons8-cut-40.bmp</Image>
+        <Image Id="665" MinDPI="144">Res/icons8-cut-48.bmp</Image>
+        <Image Id="666" MinDPI="192">Res/icons8-cut-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="sbgMoveTo" Id="50">
+      <Command.LabelTitle>
+        <String Id="667">&amp;Move to </String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="668">Move to</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="669">Move the selected files to a specific location.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="670">M</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="671">Res/icons8-move-to-folder-16.bmp</Image>
+        <Image Id="672" MinDPI="120">Res/icons8-move-to-folder-20.bmp</Image>
+        <Image Id="673" MinDPI="144">Res/icons8-move-to-folder-24.bmp</Image>
+        <Image Id="674" MinDPI="192">Res/icons8-move-to-folder-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="675">Res/icons8-move-to-folder-32.bmp</Image>
+        <Image Id="676" MinDPI="120">Res/icons8-move-to-folder-40.bmp</Image>
+        <Image Id="677" MinDPI="144">Res/icons8-move-to-folder-48.bmp</Image>
+        <Image Id="678" MinDPI="192">Res/icons8-move-to-folder-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnBrowseMoveTo" Id="51">
+      <Command.LabelTitle>
+        <String Id="679">&amp;Browse...</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="680">Browse</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="681">Browse for the move destination.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="682">B</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="683">Res/icons8-browse-folder-16.bmp</Image>
+        <Image Id="684" MinDPI="120">Res/icons8-browse-folder-20.bmp</Image>
+        <Image Id="685" MinDPI="144">Res/icons8-browse-folder-24.bmp</Image>
+        <Image Id="686" MinDPI="192">Res/icons8-browse-folder-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="687">Res/icons8-browse-folder-32.bmp</Image>
+        <Image Id="688" MinDPI="120">Res/icons8-browse-folder-40.bmp</Image>
+        <Image Id="689" MinDPI="144">Res/icons8-browse-folder-48.bmp</Image>
+        <Image Id="690" MinDPI="192">Res/icons8-browse-folder-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="grpOperations" Id="52">
+      <Command.LabelTitle>
+        <String Id="691">Operations</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="692">Operations</String>
+      </Command.TooltipTitle>
+      <Command.SmallImages>
+        <Image Id="693">Res/icons8-rename-16.bmp</Image>
+        <Image Id="694" MinDPI="120">Res/icons8-rename-20.bmp</Image>
+        <Image Id="695" MinDPI="144">Res/icons8-rename-24.bmp</Image>
+        <Image Id="696" MinDPI="192">Res/icons8-rename-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="697">Res/icons8-rename-32.bmp</Image>
+        <Image Id="698" MinDPI="120">Res/icons8-rename-40.bmp</Image>
+        <Image Id="699" MinDPI="144">Res/icons8-rename-48.bmp</Image>
+        <Image Id="700" MinDPI="192">Res/icons8-rename-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnRename" Id="53">
+      <Command.LabelTitle>
+        <String Id="701">&amp;Rename</String>
+      </Command.LabelTitle>
+      <Command.TooltipTitle>
+        <String Id="702">Rename (F2)</String>
+      </Command.TooltipTitle>
+      <Command.TooltipDescription>
+        <String Id="703">Rename the selected file.</String>
+      </Command.TooltipDescription>
+      <Command.Keytip>
+        <String Id="704">R</String>
+      </Command.Keytip>
+      <Command.SmallImages>
+        <Image Id="705">Res/icons8-rename-16.bmp</Image>
+        <Image Id="706" MinDPI="120">Res/icons8-rename-20.bmp</Image>
+        <Image Id="707" MinDPI="144">Res/icons8-rename-24.bmp</Image>
+        <Image Id="708" MinDPI="192">Res/icons8-rename-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image Id="709">Res/icons8-rename-32.bmp</Image>
+        <Image Id="710" MinDPI="120">Res/icons8-rename-40.bmp</Image>
+        <Image Id="711" MinDPI="144">Res/icons8-rename-48.bmp</Image>
+        <Image Id="712" MinDPI="192">Res/icons8-rename-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnDelete" Id="54" LabelTitle="&amp;Delete" TooltipTitle="Delete (Del)" TooltipDescription="Delete the selected file(s)." Keytip="D">
+      <Command.SmallImages>
+        <Image>Res/icons8-delete-normal-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-delete-normal-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-delete-normal-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-delete-normal-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-delete-normal-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-delete-normal-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-delete-normal-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-delete-normal-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnPermDelete" Id="55" LabelTitle="Dele&amp;te permanently" TooltipTitle="Delete permanently (Shift + Del)" TooltipDescription="Delete the file permanently, without sending it to the Recycle Bin." Keytip="P">
+      <Command.SmallImages>
+        <Image>Res/icons8-delete-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-delete-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-delete-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-delete-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-delete-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-delete-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-delete-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-delete-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnRecycleBin" Id="56" LabelTitle="&amp;Recycle bin" TooltipTitle="Recycle bin" TooltipDescription="View the recycle bin." Keytip="R">
+      <Command.SmallImages>
+        <Image>Res/icons8-delete-normal-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-delete-normal-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-delete-normal-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-delete-normal-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-delete-normal-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-delete-normal-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-delete-normal-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-delete-normal-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="chbConfirmDelete" Id="57" LabelTitle="&amp;Confirm deletion" TooltipTitle="Confirm deletion" TooltipDescription="Ask for confirmation before deleting files." Keytip="C" />
+    <Command Name="grpNew" Id="58" LabelTitle="New" TooltipTitle="New" TooltipDescription="New group (Home tab)">
+      <Command.SmallImages>
+        <Image>Res/icons8-add-item-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-add-item-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-add-item-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-add-item-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-add-item-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-add-item-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-add-item-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-add-item-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnNewDir" Id="59" LabelTitle="&amp;New Directory" TooltipTitle="New Directory (Ctrl + Shift + N)" TooltipDescription="Create a new directory." Keytip="ND">
+      <Command.SmallImages>
+        <Image>Res/icons8-add-folder-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-add-folder-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-add-folder-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-add-folder-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-add-folder-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-add-folder-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-add-folder-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-add-folder-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnNewText" Id="60" LabelTitle="&amp;New text file" TooltipTitle="New text file (Ctrl + N)" TooltipDescription="Create a new empty text file." Keytip="NT">
+      <Command.SmallImages>
+        <Image>Res/icons8-document-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-document-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-document-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-document-32.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+    <Command Name="btnNewShortcut" Id="61" LabelTitle="&amp;New shortcut" TooltipTitle="New shortcut (Alt + Ctrl + N)" TooltipDescription="Create a new shortcut." Keytip="NS">
+      <Command.SmallImages>
+        <Image>Res/icons8-shortcut-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-shortcut-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-shortcut-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-shortcut-32.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+    <Command Name="ddbNewOptions" Id="62" LabelTitle="&amp;More options" TooltipTitle="More options" TooltipDescription="View more file creation options." Keytip="NM">
+      <Command.SmallImages>
+        <Image>Res/icons8-new-item-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-new-item-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-new-item-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-new-item-32.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+    <Command Name="mngTextFiles" Id="63" LabelTitle="Text" />
+    <Command Name="btnMkFTxt" Id="64" LabelTitle="&amp;TXT" TooltipTitle="TXT" TooltipDescription="Plain-text file" Keytip="T" />
+    <Command Name="btnMkFMd" Id="65" LabelTitle="&amp;MD" TooltipTitle="MD" TooltipDescription="Markdown file" Keytip="M" />
+    <Command Name="btnMkFRtf" Id="66" LabelTitle="&amp;RTF" TooltipTitle="RTF" TooltipDescription="Rich Text Format file" Keytip="R" />
+    <Command Name="mngConfFiles" Id="67" LabelTitle="Configuration" />
+    <Command Name="btnMkFXml" Id="68" LabelTitle="&amp;XML" TooltipTitle="XML" TooltipDescription="Extensible Markup Language file" Keytip="X" />
+    <Command Name="btnMkFJson" Id="69" LabelTitle="&amp;JSON" TooltipTitle="JSON" TooltipDescription="JavaScript Object Notation file" Keytip="J" />
+    <Command Name="btnMkFIni" Id="70" LabelTitle="I&amp;NI" TooltipTitle="INI" TooltipDescription="Program initialization data file" Keytip="N" />
+    <Command Name="mngLinkFiles" Id="71" LabelTitle="Links" />
+    <Command Name="btnMkFLnk" Id="72" LabelTitle="&amp;LNK (Shortcut)" TooltipTitle="LNK" TooltipDescription="Windows shortcut to shell item" Keytip="L" />
+    <Command Name="btnMkFUrl" Id="74" LabelTitle="&amp;URL (Internet shortcut)" TooltipTitle="URL" TooltipDescription="Windows shortcut to a URI" Keytip="U" />
+    <Command Name="btnMkFSl" Id="73" LabelTitle="&amp;Symbolic link" TooltipTitle="Symbolic Link" TooltipDescription="Symbolic link, junction, or hard link." Keytip="S" />
+    <Command Name="mngScriptFiles" Id="75" LabelTitle="Scripts" />
+    <Command Name="btnMkFBat" Id="76" LabelTitle="&amp;BAT" TooltipTitle="BAT" TooltipDescription="Command Prompt batch file" Keytip="B" />
+    <Command Name="btnMkFCmd" Comment="technically the same as BAT" Id="77" LabelTitle="&amp;CMD" TooltipTitle="CMD" TooltipDescription="Command Prompt script (same as BAT)" Keytip="CD" />
+    <Command Name="btnMkFPs1" Id="78" LabelTitle="&amp;PS1" TooltipTitle="PS1" TooltipDescription="PowerShell script" Keytip="P" />
+    <Command Name="btnMkFSh" Id="79" LabelTitle="&amp;SH" TooltipTitle="SH" TooltipDescription="Shell script" Keytip="S" />
+    <Command Name="btnMkFFCmd" Id="80" LabelTitle="&amp;FCMD" TooltipTitle="FCMD" TooltipDescription="FileCMD script" Keytip="F" />
+    <Command Name="mngCodeFiles" Id="81" LabelTitle="Code" />
+    <Command Name="btnMkFCs" Id="82" LabelTitle="&amp;CS" TooltipTitle="CS" TooltipDescription="C# source file" Keytip="CS" />
+    <Command Name="btnMkFCpp" Id="83" LabelTitle="C&amp;PP" TooltipTitle="CPP" TooltipDescription="C++ source file" Keytip="P" />
+    <Command Name="btnMkFC" Id="84" LabelTitle="&amp;C" TooltipTitle="C" TooltipDescription="C source file" Keytip="C" />
+    <Command Name="btnMkFPy" Id="85" LabelTitle="P&amp;Y" TooltipTitle="PY" TooltipDescription="Python source file" Keytip="Y" />
+    <Command Name="btnOpen" Id="86" LabelTitle="&amp;Open" TooltipTitle="Open (Enter)" TooltipDescription="Open the selected file." Keytip="O">
+      <Command.SmallImages>
+        <Image>Res/icons8-open-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-open-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-open-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-open-32.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+    <Command Name="btnRunAs" Id="87" LabelTitle="&amp;Start as administrator" Keytip="A">
+      <Command.SmallImages>
+        <Image>Res/icons8-microsoft-admin-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-microsoft-admin-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-microsoft-admin-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-microsoft-admin-32.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+    <Command Name="ddgRunOptions" Id="88" LabelTitle="Open &amp;using" Keytip="U">
+      <Command.SmallImages>
+        <Image>Res/icons8-open-with-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-open-with-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-open-with-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-open-with-32.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+    <Command Name="btnOpenWith" Id="89" LabelTitle="&amp;Open with..." TooltipTitle="Open with (Shift + Enter)" TooltipDescription="Choose an app to open the selected file." Keytip="W">
+      <Command.SmallImages>
+        <Image>Res/icons8-open-with-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-open-with-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-open-with-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-open-with-32.bmp</Image>
+      </Command.SmallImages>
+    </Command>
+    <Command Name="btnProperties" Id="90" LabelTitle="&amp;Properties" TooltipTitle="Properties (Alt + Enter)" Keytip="P">
+      <Command.SmallImages>
+        <Image>Res/icons8-check-file-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-check-file-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-check-file-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-check-file-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-check-file-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-check-file-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-check-file-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-check-file-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="grpNavigation" Id="91" LabelTitle="Navigation" TooltipDescription="Navigation group (Browse tab)" />
+    <Command Name="btnBack" Id="92" LabelTitle="&amp;Back" TooltipTitle="Back (Alt + left arrow)" TooltipDescription="Go to the previous directory." Keytip="B">
+      <Command.SmallImages>
+        <Image>Res/icons8-back-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-back-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-back-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-back-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-back-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-back-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-back-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-back-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnFwd" Id="93" LabelTitle="&amp;Forward" TooltipTitle="Forward (Alt + right arrow)" TooltipDescription="Go to the next directory in the history queue." Keytip="F">
+      <Command.SmallImages>
+        <Image>Res/icons8-forward-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-forward-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-forward-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-forward-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-forward-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-forward-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-forward-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-forward-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnUp" Id="94" LabelTitle="&amp;Up" TooltipTitle="Up (Alt + up arrow)" TooltipDescription="Go to the directory above the current directory.">
+      <Command.SmallImages>
+        <Image>Res/icons8-up-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-up-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-up-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-up-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-up-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-up-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-up-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-up-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnThisPC" Id="95" LabelTitle="&amp;This PC" TooltipTitle="This PC (Alt + down arrow)" TooltipDescription="Go to the root directory." Keytip="T">
+      <Command.SmallImages>
+        <Image>Res/icons8-this-pc-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-this-pc-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-this-pc-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-this-pc-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-this-pc-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-this-pc-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-this-pc-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-this-pc-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="grpPath" Id="96" LabelTitle="Path" TooltipDescription="Path group (Browse tab)">
+      <Command.SmallImages>
+        <Image>Res/icons8-file-path-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-file-path-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-file-path-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-file-path-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-file-path-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-file-path-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-file-path-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-file-path-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnGoToPath" Id="97" LabelTitle="&amp;Go to Path" TooltipTitle="Go to Path (Ctrl + G)" TooltipDescription="Navigate to a specific directory by entering a file path." Keytip="G">
+      <Command.SmallImages>
+        <Image>Res/icons8-file-path-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-file-path-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-file-path-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-file-path-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-file-path-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-file-path-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-file-path-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-file-path-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnFind" Id="98" LabelTitle="&amp;Find" TooltipTitle="Find (Ctrl + F)" TooltipDescription="Search for files or directories." Keytip="F">
+      <Command.SmallImages>
+        <Image>Res/icons8-browse-folder-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-browse-folder-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-browse-folder-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-browse-folder-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-browse-folder-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-browse-folder-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-browse-folder-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-browse-folder-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="grpPerms" Id="99" LabelTitle="Permissions" TooltipDescription="Permissions group (Security tab)">
+      <Command.SmallImages>
+        <Image>Res/icons8-key-security-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-key-security-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-key-security-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-key-security-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-key-security-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-key-security-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-key-security-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-key-security-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnViewAcl" Id="100" LabelTitle="&amp;View ACL" TooltipTitle="View ACL (Alt + Shift + A)" TooltipDescription="View the ACLs (Access Control Lists) of the selected files." Keytip="AV">
+      <Command.SmallImages>
+        <Image>Res/icons8-view-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-view-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-view-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-view-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-view-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-view-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-view-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-view-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="btnEditAcl" Id="101" LabelTitle="&amp;Edit ACL" TooltipTitle="Edit ACL (Shift + A)" TooltipDescription="Edit the ACLs (Access Control Lists) of the selected files." Keytip="AE">
+      <Command.SmallImages>
+        <Image>Res/icons8-key-security-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-key-security-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-key-security-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-key-security-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-key-security-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-key-security-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-key-security-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-key-security-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="grpOwnership" Id="102" LabelTitle="Ownership" TooltipDescription="Ownership group (Security tab)">
+      <Command.SmallImages>
+        <Image>Res/icons8-landlord-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-landlord-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-landlord-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-landlord-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-landlord-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-landlord-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-landlord-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-landlord-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+  </Application.Commands>
+  <Application.Views>
+    <Ribbon Name="Ribbon" GroupSpacing="Medium">
+      <Ribbon.ApplicationMenu>
+        <ApplicationMenu CommandName="ApplicationMenu">
+          <ApplicationMenu.RecentItems>
+            <RecentItems CommandName="RecentItemsCaption" />
+          </ApplicationMenu.RecentItems>
+          <MenuGroup>
+            <Button CommandName="btnNewWindow" />
+            <SplitButtonGallery CommandName="sbgCliHere" />
+          </MenuGroup>
+          <MenuGroup>
+            <Button CommandName="btnSettings" />
+            <SplitButton CommandName="sbAbout">
+              <SplitButton.ButtonItem>
+                <Button CommandName="btnAbout" />
+              </SplitButton.ButtonItem>
+              <SplitButton.MenuGroups>
+                <MenuGroup CommandName="mngAbout" Class="MajorItems">
+                  <Button CommandName="btnAbout" />
+                  <Button CommandName="btnAboutWin" />
+                </MenuGroup>
+              </SplitButton.MenuGroups>
+            </SplitButton>
+          </MenuGroup>
+          <MenuGroup>
+            <Button CommandName="btnExit" />
+          </MenuGroup>
+        </ApplicationMenu>
+      </Ribbon.ApplicationMenu>
+      <Ribbon.HelpButton>
+        <HelpButton CommandName="HelpButton" />
+      </Ribbon.HelpButton>
+      <Ribbon.QuickAccessToolbar>
+        <QuickAccessToolbar CommandName="QAT" CustomizeCommandName="btnCustomizeQat">
+          <QuickAccessToolbar.ApplicationDefaults>
+            <Button CommandName="btnNewWindow" ApplicationDefaults.IsChecked="false" />
+            <Button CommandName="btnRename" ApplicationDefaults.IsChecked="true" />
+            <Button CommandName="btnDelete" ApplicationDefaults.IsChecked="true" />
+            <Button CommandName="btnProperties" ApplicationDefaults.IsChecked="true" />
+            <Button CommandName="btnOpen" ApplicationDefaults.IsChecked="false" />
+          </QuickAccessToolbar.ApplicationDefaults>
+        </QuickAccessToolbar>
+      </Ribbon.QuickAccessToolbar>
+      <Ribbon.ContextualTabs>
+        <TabGroup CommandName="ctabPicTools">
+          <Tab CommandName="tabPicture" />
+        </TabGroup>
+        <TabGroup CommandName="ctabImgTools">
+          <Tab CommandName="tabDskImg" />
+        </TabGroup>
+        <TabGroup CommandName="ctabArchiveTools">
+          <Tab CommandName="tabArchive" />
+        </TabGroup>
+        <TabGroup CommandName="ctabExeTools">
+          <Tab CommandName="tabExe" />
+        </TabGroup>
+        <TabGroup CommandName="ctabScriptTools">
+          <Tab CommandName="tabScript" />
+        </TabGroup>
+        <TabGroup CommandName="ctabDriveTools">
+          <Tab CommandName="tabDrive" />
+        </TabGroup>
+        <TabGroup CommandName="ctabComputer">
+          <Tab CommandName="tabThisPC" />
+        </TabGroup>
+      </Ribbon.ContextualTabs>
+      <Ribbon.Tabs>
+        <Tab CommandName="tabHome">
+          <Tab.ScalingPolicy>
+            <ScalingPolicy>
+              <ScalingPolicy.IdealSizes>
+                <Scale Group="grpClipboard" Size="Large" />
+                <Scale Group="grpOperations" Size="Medium" />
+                <Scale Group="grpNew" Size="Medium" />
+              </ScalingPolicy.IdealSizes>
+              <Scale Group="grpClipboard" Size="Medium" />
+              <Scale Group="grpClipboard" Size="Small" />
+              <Scale Group="grpClipboard" Size="Popup" />
+              <Scale Group="grpOperations" Size="Small" />
+              <Scale Group="grpOperations" Size="Popup" />
+              <Scale Group="grpNew" Size="Small" />
+              <Scale Group="grpNew" Size="Popup" />
+            </ScalingPolicy>
+          </Tab.ScalingPolicy>
+          <Group CommandName="grpClipboard">
+            <SizeDefinition>
+              <ControlNameMap>
+                <ControlNameDefinition Name="copy" />
+                <ControlNameDefinition Name="paste" />
+                <ControlNameDefinition Name="cut" />
+                <ControlNameDefinition Name="copy_to" />
+                <ControlNameDefinition Name="move_to" />
+              </ControlNameMap>
+              <GroupSizeDefinition Size="Large">
+                <ControlSizeDefinition ImageSize="Large" ControlName="copy" />
+                <ControlSizeDefinition ImageSize="Large" ControlName="paste" />
+                <ColumnBreak />
+                <ControlSizeDefinition ControlName="cut" />
+                <ControlSizeDefinition ControlName="copy_to" />
+                <ControlSizeDefinition ControlName="move_to" />
+              </GroupSizeDefinition>
+              <GroupSizeDefinition Size="Medium">
+                <ControlSizeDefinition ImageSize="Large" ControlName="copy" />
+                <ControlSizeDefinition ImageSize="Large" ControlName="paste" />
+                <ColumnBreak />
+                <ControlSizeDefinition IsLabelVisible="false" ControlName="cut" />
+                <ControlSizeDefinition IsLabelVisible="false" ControlName="copy_to" />
+                <ControlSizeDefinition IsLabelVisible="false" ControlName="move_to" />
+              </GroupSizeDefinition>
+              <GroupSizeDefinition Size="Small">
+                <Row>
+                  <ControlSizeDefinition IsLabelVisible="false" ControlName="copy" />
+                  <ControlSizeDefinition IsLabelVisible="false" ControlName="paste" />
+                </Row>
+                <Row>
+                  <ControlSizeDefinition IsLabelVisible="false" ControlName="copy_to" />
+                  <ControlSizeDefinition IsLabelVisible="false" ControlName="move_to" />
+                </Row>
+                <ControlSizeDefinition IsLabelVisible="false" ControlName="cut" />
+              </GroupSizeDefinition>
+            </SizeDefinition>
+            <SplitButton CommandName="sbCopy">
+              <SplitButton.ButtonItem>
+                <Button CommandName="btnCopy" />
+              </SplitButton.ButtonItem>
+              <Button CommandName="btnCopy" />
+              <Button CommandName="btnCopyPath" />
+            </SplitButton>
+            <SplitButton CommandName="sbPaste">
+              <SplitButton.ButtonItem>
+                <Button CommandName="btnPaste" />
+              </SplitButton.ButtonItem>
+              <Button CommandName="btnPaste" />
+              <Button CommandName="btnPasteLink" />
+            </SplitButton>
+            <Button CommandName="btnCut" />
+            <SplitButtonGallery CommandName="sbgCopyTo">
+              <SplitButtonGallery.MenuLayout>
+                <VerticalMenuLayout />
+              </SplitButtonGallery.MenuLayout>
+              <SplitButtonGallery.MenuGroups>
+                <MenuGroup>
+                  <Button CommandName="btnBrowseCopyTo" />
+                </MenuGroup>
+              </SplitButtonGallery.MenuGroups>
+            </SplitButtonGallery>
+            <SplitButtonGallery CommandName="sbgMoveTo">
+              <SplitButtonGallery.MenuLayout>
+                <VerticalMenuLayout />
+              </SplitButtonGallery.MenuLayout>
+              <SplitButtonGallery.MenuGroups>
+                <MenuGroup>
+                  <Button CommandName="btnBrowseMoveTo" />
+                </MenuGroup>
+              </SplitButtonGallery.MenuGroups>
+            </SplitButtonGallery>
+          </Group>
+          <Group CommandName="grpOperations" SizeDefinition="SixButtons">
+            <Button CommandName="btnRename" />
+            <SplitButton>
+              <SplitButton.ButtonItem>
+                <Button CommandName="btnDelete" />
+              </SplitButton.ButtonItem>
+              <SplitButton.MenuGroups>
+                <MenuGroup>
+                  <Button CommandName="btnDelete" />
+                  <Button CommandName="btnPermDelete" />
+                </MenuGroup>
+                <MenuGroup>
+                  <CheckBox CommandName="chbConfirmDelete" />
+                  <Button CommandName="btnRecycleBin" />
+                </MenuGroup>
+              </SplitButton.MenuGroups>
+            </SplitButton>
+            <Button CommandName="btnProperties" />
+            <Button CommandName="btnOpen" />
+            <Button CommandName="btnRunAs" />
+            <DropDownGallery CommandName="ddgRunOptions">
+              <DropDownGallery.MenuLayout>
+                <VerticalMenuLayout Gripper="None" />
+              </DropDownGallery.MenuLayout>
+              <DropDownGallery.MenuGroups>
+                <MenuGroup>
+                  <Button CommandName="btnOpenWith" />
+                </MenuGroup>
+              </DropDownGallery.MenuGroups>
+            </DropDownGallery>
+          </Group>
+          <Group CommandName="grpNew" SizeDefinition="FourButtons">
+            <Button CommandName="btnNewDir" />
+            <Button CommandName="btnNewText" />
+            <Button CommandName="btnNewShortcut" />
+            <DropDownButton CommandName="ddbNewOptions">
+              <MenuGroup CommandName="mngTextFiles">
+                <Button CommandName="btnMkFTxt" />
+                <Button CommandName="btnMkFMd" />
+                <Button CommandName="btnMkFRtf" />
+              </MenuGroup>
+              <MenuGroup CommandName="mngConfFiles">
+                <Button CommandName="btnMkFXml" />
+                <Button CommandName="btnMkFJson" />
+                <Button CommandName="btnMkFIni" />
+              </MenuGroup>
+              <MenuGroup CommandName="mngLinkFiles">
+                <Button CommandName="btnMkFLnk" />
+                <Button CommandName="btnMkFUrl" />
+                <Button CommandName="btnMkFSl" />
+              </MenuGroup>
+              <MenuGroup CommandName="mngScriptFiles">
+                <Button CommandName="btnMkFBat" />
+                <Button CommandName="btnMkFCmd" />
+                <Button CommandName="btnMkFPs1" />
+                <Button CommandName="btnMkFSh" />
+                <Button CommandName="btnMkFFCmd" />
+              </MenuGroup>
+              <MenuGroup CommandName="mngCodeFiles">
+                <Button CommandName="btnMkFCs" />
+                <Button CommandName="btnMkFCpp" />
+                <Button CommandName="btnMkFC" />
+                <Button CommandName="btnMkFPy" />
+              </MenuGroup>
+            </DropDownButton>
+          </Group>
+        </Tab>
+        <Tab CommandName="tabBrowse">
+          <Tab.ScalingPolicy>
+            <ScalingPolicy>
+              <ScalingPolicy.IdealSizes>
+                <Scale Group="grpNavigation" Size="Large" />
+                <Scale Group="grpPath" Size="Large" />
+              </ScalingPolicy.IdealSizes>
+              <Scale Group="grpNavigation" Size="Medium" />
+              <Scale Group="grpNavigation" Size="Small" />
+              <Scale Group="grpNavigation" Size="Popup" />
+              <Scale Group="grpPath" Size="Medium" />
+              <Scale Group="grpPath" Size="Popup" />
+            </ScalingPolicy>
+          </Tab.ScalingPolicy>
+          <Group CommandName="grpNavigation" SizeDefinition="FourButtons">
+            <Button CommandName="btnBack" />
+            <Button CommandName="btnFwd" />
+            <Button CommandName="btnUp" />
+            <Button CommandName="btnThisPC" />
+          </Group>
+          <Group CommandName="grpPath" SizeDefinition="TwoButtons">
+            <Button CommandName="btnGoToPath" />
+            <Button CommandName="btnFind" />
+          </Group>
+        </Tab>
+        <Tab CommandName="tabSecurity">
+          <Group CommandName="grpPerms" SizeDefinition="TwoButtons">
+            <Button CommandName="btnViewAcl" />
+            <Button CommandName="btnEditAcl" />
+          </Group>
+          <Group CommandName="grpOwnership" />
+        </Tab>
+        <Tab CommandName="tabView" />
+        <Tab CommandName="tabTools" />
+      </Ribbon.Tabs>
+    </Ribbon>
+    <ContextPopup />
+  </Application.Views>
+</Application>
+<!--ResourceName Value="APPLICATION"-->

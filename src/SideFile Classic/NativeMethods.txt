@@ -1,0 +1,6 @@
+﻿DwmGetColorizationColor
+WM_DWMCOLORIZATIONCOLORCHANGED
+DwmSetWindowAttribute
+WM_THEMECHANGED
+SendMessageW
+GetModuleHandleW

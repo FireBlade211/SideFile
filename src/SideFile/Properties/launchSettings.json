@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SideFile (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "SideFile (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
