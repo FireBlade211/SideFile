@@ -8,7 +8,8 @@
     <Platform Solution="*|ARM64" Project="x64" />
   </Project>
   <Project Path="SideFile Classic/SideFile Classic.csproj">
-    <Platform Solution="Debug|x64" Project="x64" />
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="Release|x86" Project="x86" />
   </Project>
   <Project Path="SideFile/SideFile.csproj">
     <Platform Solution="*|ARM64" Project="ARM64" />
