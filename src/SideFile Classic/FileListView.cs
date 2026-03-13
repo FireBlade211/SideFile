@@ -210,7 +210,29 @@ namespace SideFile.Classic
 
                 if (item.Tag is ListItemInfo info)
                 {
-                    if (info.Info is DirectoryInfo dir)
+                    if (info.Info is FileInfo)
+                    {
+                        try
+                        {
+                            Process.Start(new ProcessStartInfo
+                            {
+                                FileName = info.Path,
+                                UseShellExecute = true
+                            });
+                        }
+                        catch (Exception ex)
+                        {
+                            WinMessageBox mb = new WinMessageBox();
+                            mb.Culture = CultureInfo.CurrentUICulture;
+                            mb.Text = $"Error opening file {Path.GetFileName(info.Path)}: {ex.Message}";
+                            mb.Icon = WinMessageBoxIcon.Error;
+                            mb.Caption = null;
+
+                            if (Window.FromHandle(Form1.Current.Handle) is Window wnd)
+                                mb.Show(wnd);
+                        }
+                    }
+                    else
                     {
                         var oldDir = CurrentDir;
 
@@ -234,28 +256,6 @@ namespace SideFile.Classic
 
                             CurrentDir = oldDir;
                             Navigate();
-                        }
-                    }
-                    else
-                    {
-                        try
-                        {
-                            Process.Start(new ProcessStartInfo
-                            {
-                                FileName = info.Path,
-                                UseShellExecute = true
-                            });
-                        }
-                        catch (Exception ex)
-                        {
-                            WinMessageBox mb = new WinMessageBox();
-                            mb.Culture = CultureInfo.CurrentUICulture;
-                            mb.Text = $"Error opening file {Path.GetFileName(info.Path)}: {ex.Message}";
-                            mb.Icon = WinMessageBoxIcon.Error;
-                            mb.Caption = null;
-
-                            if (Window.FromHandle(Form1.Current.Handle) is Window wnd)
-                                mb.Show(wnd);
                         }
                     }
                 }
