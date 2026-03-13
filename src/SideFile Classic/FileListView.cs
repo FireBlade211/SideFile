@@ -2,6 +2,7 @@
 using FireBlade.WinInteropUtils.Dialogs;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
 using Windows.Win32;
@@ -126,17 +127,17 @@ namespace SideFile.Classic
                                 int iconIndex = 0;
 
                                 if (Shell32.GetFileInfoEx(
-                                    drive.Name,
+                                    drive.RootDirectory.FullName,
                                     0,
                                     Shell32.SHGetFileInfoFlags.SHGFI_SYSICONINDEX |
                                     Shell32.SHGetFileInfoFlags.SHGFI_SMALLICON,
                                     ref shfi) != 0)
                                 {
-                                    using var file = new WindowsFile(shfi, drive.Name);
+                                    using var file = new WindowsFile(shfi, drive.RootDirectory.FullName);
                                     iconIndex = file.IconIndex;
                                 }
 
-                                item.Tag = new ListItemInfo { Path = drive.Name };
+                                item.Tag = new ListItemInfo { Path = drive.RootDirectory.FullName, Info = drive.RootDirectory };
 
                                 BeginInvoke(() =>
                                 {
@@ -189,7 +190,8 @@ namespace SideFile.Classic
 
                 item.Tag = new ListItemInfo
                 {
-                    Path = info.FullName
+                    Path = info.FullName,
+                    Info = info
                 };
 
                 Items.Add(item);
@@ -207,28 +209,53 @@ namespace SideFile.Classic
 
                 if (item.Tag is ListItemInfo info)
                 {
-                    var oldDir = CurrentDir;
-
-                    try
+                    if (info.Info is DirectoryInfo dir)
                     {
-                        CurrentDir = info?.Path ?? string.Empty;
-                        Navigate();
+                        var oldDir = CurrentDir;
+
+                        try
+                        {
+                            CurrentDir = info?.Path ?? string.Empty;
+                            Navigate();
+                        }
+                        catch (Exception ex)
+                        {
+                            DebugPanel.OnExceptionReceived(ex);
+
+                            WinMessageBox mb = new WinMessageBox();
+                            mb.Culture = CultureInfo.CurrentUICulture;
+                            mb.Text = $"Error accessing path {Path.GetFullPath(CurrentDir)}: {ex.Message}";
+                            mb.Icon = WinMessageBoxIcon.Error;
+                            mb.Caption = null;
+
+                            if (Window.FromHandle(Form1.Current.Handle) is Window wnd)
+                                mb.Show(wnd);
+
+                            CurrentDir = oldDir;
+                            Navigate();
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        DebugPanel.OnExceptionReceived(ex);
+                        try
+                        {
+                            Process.Start(new ProcessStartInfo
+                            {
+                                FileName = info.Path,
+                                UseShellExecute = true
+                            });
+                        }
+                        catch (Exception ex)
+                        {
+                            WinMessageBox mb = new WinMessageBox();
+                            mb.Culture = CultureInfo.CurrentUICulture;
+                            mb.Text = $"Error opening file {Path.GetFileName(info.Path)}: {ex.Message}";
+                            mb.Icon = WinMessageBoxIcon.Error;
+                            mb.Caption = null;
 
-                        WinMessageBox mb = new WinMessageBox();
-                        mb.Culture = CultureInfo.CurrentUICulture;
-                        mb.Text = $"Error accessing path {Path.GetFullPath(CurrentDir)}: {ex.Message}";
-                        mb.Icon = WinMessageBoxIcon.Error;
-                        mb.Caption = null;
-
-                        if (Window.FromHandle(Form1.Current.Handle) is Window wnd)
-                            mb.Show(wnd);
-
-                        CurrentDir = oldDir;
-                        Navigate();
+                            if (Window.FromHandle(Form1.Current.Handle) is Window wnd)
+                                mb.Show(wnd);
+                        }
                     }
                 }
                 else
@@ -266,6 +293,7 @@ namespace SideFile.Classic
         public class ListItemInfo
         {
             public string Path = string.Empty;
+            public FileSystemInfo Info = null!;
         }
     }
 }
