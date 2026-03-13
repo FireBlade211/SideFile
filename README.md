@@ -32,3 +32,5 @@ I originally thought that .NET 10 meant the app could run only on Windows 10/11,
 4. Install the *Microsoft Visual C++ Redistributable 2015-2022* ([x64](https://download.visualstudio.microsoft.com/download/pr/40b59c73-1480-4caf-ab5b-4886f176bf71/D62841375B90782B1829483AC75695CCEF680A8F13E7DE569B992EF33C6CD14A/VC_redist.x64.exe) / [x86](https://download.visualstudio.microsoft.com/download/pr/40b59c73-1480-4caf-ab5b-4886f176bf71/435A0DE411B991E2BFC7FD1D5439639E7B32206960D3099370E36172018F52FE/VC_redist.x86.exe)) (*i know, this is a C# app, but it's needed anyway*)
 5. Install the [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0/runtime).
 6. Follow the steps in the [Installation](#installation) section to run the app.
+
+![SideFile Classic running on Windows 7](readme-screenshot-w7.png)
