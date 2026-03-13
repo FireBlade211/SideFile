@@ -110,10 +110,13 @@ namespace WinForms.Ribbon
             public const uint grpOwnership = 102;
             public const uint tabView = 23;
             public const uint tabTools = 24;
+            public const uint btnCompress = 104;
+            public const uint ctxmFileCtxMenu = 103;
             public const uint btnCustomizeQat = 7;
         }
 
         // ContextPopup CommandName
+        public const uint ctxmFileCtxMenu = Cmd.ctxmFileCtxMenu;
 
         public RibbonStrip Ribbon { get; private set; }
         public RibbonApplicationMenu ApplicationMenu { get; private set; }
@@ -213,6 +216,7 @@ namespace WinForms.Ribbon
         public RibbonGroup grpOwnership { get; private set; }
         public RibbonTab tabView { get; private set; }
         public RibbonTab tabTools { get; private set; }
+        public RibbonButton btnCompress { get; private set; }
 
         public RibbonItems(RibbonStrip ribbon)
         {
@@ -313,6 +317,7 @@ namespace WinForms.Ribbon
             grpOwnership = new RibbonGroup(ribbon, Cmd.grpOwnership);
             tabView = new RibbonTab(ribbon, Cmd.tabView);
             tabTools = new RibbonTab(ribbon, Cmd.tabTools);
+            btnCompress = new RibbonButton(ribbon, Cmd.btnCompress);
         }
 
     }

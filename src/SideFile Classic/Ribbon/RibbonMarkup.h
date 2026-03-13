@@ -733,4 +733,10 @@
 #define grpOwnership_LargeImages_120__RESID 60331
 #define grpOwnership_LargeImages_144__RESID 60332
 #define grpOwnership_LargeImages_192__RESID 60333
-#define InternalCmd2_LabelTitle_RESID 60334
+#define ctxmFileCtxMenu 103 
+#define btnCompress 104 
+#define btnCompress_LabelTitle_RESID 60334
+#define btnCompress_Keytip_RESID 60335
+#define btnCompress_TooltipTitle_RESID 60336
+#define btnCompress_TooltipDescription_RESID 60337
+#define InternalCmd2_LabelTitle_RESID 60338

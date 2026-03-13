@@ -867,7 +867,7 @@
         <Image MinDPI="192">Res/icons8-open-with-32.bmp</Image>
       </Command.SmallImages>
     </Command>
-    <Command Name="btnOpenWith" Id="89" LabelTitle="&amp;Open with..." TooltipTitle="Open with (Shift + Enter)" TooltipDescription="Choose an app to open the selected file." Keytip="W">
+    <Command Name="btnOpenWith" Id="89" LabelTitle="Open &amp;with..." TooltipTitle="Open with (Shift + Enter)" TooltipDescription="Choose an app to open the selected file." Keytip="W">
       <Command.SmallImages>
         <Image>Res/icons8-open-with-16.bmp</Image>
         <Image MinDPI="120">Res/icons8-open-with-20.bmp</Image>
@@ -988,7 +988,7 @@
         <Image MinDPI="192">Res/icons8-browse-folder-64.bmp</Image>
       </Command.LargeImages>
     </Command>
-    <Command Name="grpPerms" Id="99" LabelTitle="Permissions">
+    <Command Name="grpPerms" Id="99" LabelTitle="Permissions" TooltipDescription="Permissions group (Security tab)">
       <Command.SmallImages>
         <Image>Res/icons8-key-security-16.bmp</Image>
         <Image MinDPI="120">Res/icons8-key-security-20.bmp</Image>
@@ -1030,6 +1030,21 @@
         <Image MinDPI="192">Res/icons8-key-security-64.bmp</Image>
       </Command.LargeImages>
     </Command>
+    <Command Name="grpOwnership" Id="102" LabelTitle="Ownership" TooltipDescription="Ownership group (Security tab)">
+      <Command.SmallImages>
+        <Image>Res/icons8-landlord-16.bmp</Image>
+        <Image MinDPI="120">Res/icons8-landlord-20.bmp</Image>
+        <Image MinDPI="144">Res/icons8-landlord-24.bmp</Image>
+        <Image MinDPI="192">Res/icons8-landlord-32.bmp</Image>
+      </Command.SmallImages>
+      <Command.LargeImages>
+        <Image>Res/icons8-landlord-32.bmp</Image>
+        <Image MinDPI="120">Res/icons8-landlord-40.bmp</Image>
+        <Image MinDPI="144">Res/icons8-landlord-48.bmp</Image>
+        <Image MinDPI="192">Res/icons8-landlord-64.bmp</Image>
+      </Command.LargeImages>
+    </Command>
+    <Command Name="ctxmFileCtxMenu" Id="103" />
   </Application.Commands>
   <Application.Views>
     <Ribbon Name="Ribbon" GroupSpacing="Medium">
@@ -1286,12 +1301,25 @@
             <Button CommandName="btnViewAcl" />
             <Button CommandName="btnEditAcl" />
           </Group>
+          <Group CommandName="grpOwnership" />
         </Tab>
         <Tab CommandName="tabView" />
         <Tab CommandName="tabTools" />
       </Ribbon.Tabs>
     </Ribbon>
-    <ContextPopup />
+    <ContextPopup>
+      <ContextPopup.ContextMenus>
+        <ContextMenu Name="File context menu">
+          <MenuGroup>
+            <Button CommandName="btnOpen" />
+            <Button CommandName="btnOpenWith" />
+          </MenuGroup>
+        </ContextMenu>
+      </ContextPopup.ContextMenus>
+      <ContextPopup.ContextMaps>
+        <ContextMap CommandName="ctxmFileCtxMenu" ContextMenu="File context menu" />
+      </ContextPopup.ContextMaps>
+    </ContextPopup>
   </Application.Views>
 </Application>
 <!--ResourceName Value="APPLICATION"-->

@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 using Windows.Win32.UI.Shell;
+using WinForms.Ribbon;
 
 namespace SideFile.Classic
 {
@@ -289,7 +290,42 @@ namespace SideFile.Classic
             }
             catch (Exception ex) { DebugPanel.OnExceptionReceived(ex); }
         }
-        
+
+        protected override void OnMouseClick(MouseEventArgs e)
+        {
+            base.OnMouseClick(e);
+
+            if (e.Button == MouseButtons.Right)
+                DoContextMenu();
+        }
+
+        protected override void OnPreviewKeyDown(PreviewKeyDownEventArgs e)
+        {
+            base.OnPreviewKeyDown(e);
+            
+            if (e.KeyCode == Keys.Apps)
+                DoContextMenu();
+        }
+
+        private void DoContextMenu()
+        {
+            if (SelectedItems.Count == 1)
+            {
+                var item = SelectedItems[0];
+
+                if (item.Tag is ListItemInfo info)
+                {
+                    if (info.Info is FileInfo)
+                    {
+                        if (FindForm() is Form1 f)
+                        {
+                            f.Ribbon.ShowContextPopup(RibbonItems.ctxmFileCtxMenu, Cursor.Position.X, Cursor.Position.Y);
+                        }
+                    }
+                }
+            }
+        }
+
         public class ListItemInfo
         {
             public string Path = string.Empty;

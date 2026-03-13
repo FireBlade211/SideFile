@@ -867,7 +867,7 @@
         <Image MinDPI="192">Res/icons8-open-with-32.bmp</Image>
       </Command.SmallImages>
     </Command>
-    <Command Name="btnOpenWith" Id="89" LabelTitle="&amp;Open with..." TooltipTitle="Open with (Shift + Enter)" TooltipDescription="Choose an app to open the selected file." Keytip="W">
+    <Command Name="btnOpenWith" Id="89" LabelTitle="Open &amp;with..." TooltipTitle="Open with (Shift + Enter)" TooltipDescription="Choose an app to open the selected file." Keytip="W">
       <Command.SmallImages>
         <Image>Res/icons8-open-with-16.bmp</Image>
         <Image MinDPI="120">Res/icons8-open-with-20.bmp</Image>
@@ -1044,6 +1044,8 @@
         <Image MinDPI="192">Res/icons8-landlord-64.bmp</Image>
       </Command.LargeImages>
     </Command>
+    <Command Name="ctxmFileCtxMenu" Id="103" />
+    <Command Name="btnCompress" Id="104" LabelTitle="&amp;Compress..." TooltipTitle="Compress (Alt + C)" TooltipDescription="Create a compressed folder containing the selected file(s)," Keytip="C" />
   </Application.Commands>
   <Application.Views>
     <Ribbon Name="Ribbon" GroupSpacing="Medium">
@@ -1306,7 +1308,22 @@
         <Tab CommandName="tabTools" />
       </Ribbon.Tabs>
     </Ribbon>
-    <ContextPopup />
+    <ContextPopup>
+      <ContextPopup.ContextMenus>
+        <ContextMenu Name="File context menu">
+          <MenuGroup>
+            <Button CommandName="btnOpen" />
+            <Button CommandName="btnOpenWith" />
+          </MenuGroup>
+          <MenuGroup>
+            <Button CommandName="btnCompress" />
+          </MenuGroup>
+        </ContextMenu>
+      </ContextPopup.ContextMenus>
+      <ContextPopup.ContextMaps>
+        <ContextMap CommandName="ctxmFileCtxMenu" ContextMenu="File context menu" />
+      </ContextPopup.ContextMaps>
+    </ContextPopup>
   </Application.Views>
 </Application>
 <!--ResourceName Value="APPLICATION"-->
