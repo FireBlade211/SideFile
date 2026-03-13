@@ -1,17 +1,22 @@
 <Solution>
   <Configurations>
+    <Platform Name="ARM32" />
     <Platform Name="ARM64" />
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
   <Project Path="Resource Project/Resource Project.vcxproj" Id="59b7318c-10a7-40b3-8cb4-051ab465c676">
-    <Platform Solution="*|ARM64" Project="x64" />
+    <Platform Solution="*|ARM32" Project="ARM" />
+    <Platform Solution="Debug|ARM64" Project="x64" />
   </Project>
   <Project Path="SideFile Classic/SideFile Classic.csproj">
+    <Platform Solution="*|ARM32" Project="ARM32" />
     <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="Release|ARM64" Project="ARM64" />
     <Platform Solution="Release|x86" Project="x86" />
   </Project>
   <Project Path="SideFile/SideFile.csproj">
+    <Platform Solution="*|ARM32" Project="ARM32" />
     <Platform Solution="*|ARM64" Project="ARM64" />
     <Platform Solution="*|x64" Project="x64" />
     <Platform Solution="*|x86" Project="x86" />

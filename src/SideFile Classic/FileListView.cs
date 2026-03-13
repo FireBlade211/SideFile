@@ -3,6 +3,10 @@ using FireBlade.WinInteropUtils.Dialogs;
 using System.ComponentModel;
 using System.Data;
 using System.Globalization;
+using System.Runtime.InteropServices;
+using Windows.Win32;
+using Windows.Win32.Foundation;
+using Windows.Win32.UI.Shell;
 
 namespace SideFile.Classic
 {
@@ -41,6 +45,8 @@ namespace SideFile.Classic
         [Category("Navigation")]
         public event EventHandler<string>? Navigating;
 
+        private nint _imgListHandle;
+
         public FileListView() : base()
         {
             InitializeComponent();
@@ -55,18 +61,12 @@ namespace SideFile.Classic
 
             DoubleBuffered = true;
 
-            SmallImageList = new ImageList();
-            SmallImageList.ColorDepth = ColorDepth.Depth32Bit;
+            //SmallImageList = new ImageList();
+            //SmallImageList.ColorDepth = ColorDepth.Depth32Bit;
 
-            SmallImageList?.Images.Add(StockIconHelper.GetIcon(StockIcon.DesktopPC));
-
+            //SmallImageList?.Images.Add(StockIconHelper.GetIcon(StockIcon.DesktopPC));
+            
             CurrentDir = string.Empty;
-
-            try
-            {
-                Navigate();
-            }
-            catch (Exception ex) { DebugPanel.OnExceptionReceived(ex); }
         }
 
         private void Navigate()
@@ -90,6 +90,19 @@ namespace SideFile.Classic
                     {
                         var item = new ListViewItem("..", 0);
 
+                        unsafe
+                        {
+                            // WinInteropUtils does not provide the icon index retrieval
+                            SHSTOCKICONINFO sii = new();
+                            sii.cbSize = (uint)Marshal.SizeOf<SHSTOCKICONINFO>();
+
+                            if (PInvoke.SHGetStockIconInfo((SHSTOCKICONID)StockIcon.DesktopPC, SHGSI_FLAGS.SHGSI_SYSICONINDEX | SHGSI_FLAGS.SHGSI_SMALLICON,
+                                &sii).Succeeded)
+                            {
+                                item.ImageIndex = sii.iSysImageIndex;
+                            }
+                        }
+
                         item.Tag = new ListItemInfo
                         {
                             Path = string.Empty
@@ -105,33 +118,43 @@ namespace SideFile.Classic
                     {
                         foreach (var drive in DriveInfo.GetDrives())
                         {
-                            if (!drive.IsReady) continue;
-
-                            var item = new ListViewItem($"{drive.VolumeLabel} ({drive.Name.TrimEnd('\\')})");
-                            Shell32.SHFILEINFO shfi = new();
-
-                            if (Shell32.GetFileInfoEx(drive.Name, 0,
-                                Shell32.SHGetFileInfoFlags.SHGFI_ICON | Shell32.SHGetFileInfoFlags.SHGFI_SMALLICON, ref shfi) != 0)
+                            try
                             {
-                                using (var file = new WindowsFile(shfi, drive.Name))
+                                var item = new ListViewItem($"{drive.VolumeLabel} ({drive.Name.TrimEnd('\\')})");
+                                Shell32.SHFILEINFO shfi = new();
+
+                                int iconIndex = 0;
+
+                                if (Shell32.GetFileInfoEx(
+                                    drive.Name,
+                                    0,
+                                    Shell32.SHGetFileInfoFlags.SHGFI_SYSICONINDEX |
+                                    Shell32.SHGetFileInfoFlags.SHGFI_SMALLICON,
+                                    ref shfi) != 0)
                                 {
-                                    if (file != null)
-                                    {
-                                        // original icon gets disposed on file dispose
-                                        var icon = (Icon)file.Icon.Clone();
-
-                                        Invoke(() => SmallImageList?.Images.Add(icon));
-                                        item.ImageIndex = SmallImageList?.Images.Count - 1 ?? 0;
-                                    }
+                                    using var file = new WindowsFile(shfi, drive.Name);
+                                    iconIndex = file.IconIndex;
                                 }
+
+                                item.Tag = new ListItemInfo { Path = drive.Name };
+
+                                BeginInvoke(() =>
+                                {
+                                    try
+                                    {
+                                        item.ImageIndex = iconIndex;
+                                        Items.Add(item);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        DebugPanel.OnExceptionReceived(ex);
+                                    }
+                                });
                             }
-
-                            item.Tag = new ListItemInfo
+                            catch (Exception ex)
                             {
-                                Path = drive.Name
-                            };
-
-                            Invoke(() => Items.Add(item));
+                                DebugPanel.OnExceptionReceived(ex);
+                            }
                         }
                     });
                 }
@@ -156,19 +179,12 @@ namespace SideFile.Classic
 
             Shell32.SHFILEINFO shfi = new();
 
-            if (Shell32.GetFileInfoEx(info.FullName, 0, Shell32.SHGetFileInfoFlags.SHGFI_ICON | Shell32.SHGetFileInfoFlags.SHGFI_SMALLICON
+            if (Shell32.GetFileInfoEx(info.FullName, 0, Shell32.SHGetFileInfoFlags.SHGFI_SYSICONINDEX | Shell32.SHGetFileInfoFlags.SHGFI_SMALLICON
                 | Shell32.SHGetFileInfoFlags.SHGFI_DISPLAYNAME, ref shfi) != 0)
             {
                 using (var file = new WindowsFile(shfi, info.FullName))
                 {
-                    if (file != null)
-                    {
-                        // original icon gets disposed on file dispose
-                        var icon = (Icon)file.Icon.Clone();
-
-                        SmallImageList?.Images.Add(icon);
-                        item.ImageIndex = SmallImageList?.Images.Count - 1 ?? 0;
-                    }
+                    item.ImageIndex = file.IconIndex;
                 }
 
                 item.Tag = new ListItemInfo
@@ -229,6 +245,24 @@ namespace SideFile.Classic
             }
         }
 
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+
+            Shell32.SHFILEINFO shfi = new();
+
+            _imgListHandle = (nint)Shell32.GetFileInfoEx(string.Empty, 0,
+                Shell32.SHGetFileInfoFlags.SHGFI_SYSICONINDEX | Shell32.SHGetFileInfoFlags.SHGFI_SMALLICON, ref shfi);
+
+            PInvoke.SendMessage(new HWND(Handle), PInvoke.LVM_SETIMAGELIST, PInvoke.LVSIL_SMALL, new LPARAM(_imgListHandle));
+
+            try
+            {
+                Navigate();
+            }
+            catch (Exception ex) { DebugPanel.OnExceptionReceived(ex); }
+        }
+        
         public class ListItemInfo
         {
             public string Path = string.Empty;

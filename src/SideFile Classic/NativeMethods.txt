@@ -4,3 +4,6 @@ DwmSetWindowAttribute
 WM_THEMECHANGED
 SendMessageW
 GetModuleHandleW
+LVM_SETIMAGELIST
+LVSIL_SMALL
+SHGetStockIconInfo
